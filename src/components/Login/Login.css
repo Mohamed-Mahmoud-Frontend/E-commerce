@@ -39,7 +39,7 @@
     }
 
 
-    img {
+    .Image_Login img {
         width: 100%;
         animation: up_down infinite 2s alternate;
         transition: .3s ease-in;

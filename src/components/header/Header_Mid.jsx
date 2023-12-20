@@ -5,6 +5,7 @@ Grid,
 Link} from '@mui/material'
 import StoreSharpIcon from '@mui/icons-material/StoreSharp';
 import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import DrawerComp from '../Drawer/Drawer';
@@ -13,7 +14,7 @@ import DrawerComp from '../Drawer/Drawer';
 import { useState } from 'react';
 
 
-const Header_Mid = ({links}) => {
+const Header_Mid = ({linksArray}) => {
     //State
     const [value, setValue] = useState();
 
@@ -31,7 +32,7 @@ const Header_Mid = ({links}) => {
             <Typography>
                         <StoreSharpIcon />
                     </Typography>
-         <DrawerComp links={links} /> </>
+         <DrawerComp links={linksArray} /> </>
 
          :
 
@@ -49,7 +50,9 @@ const Header_Mid = ({links}) => {
                      value={value}
                      onChange={(e, val) => setValue(val) }
                      >
-
+                        {linksArray.map((link, index) => (
+                            <Tab key={index} label={link} />
+                        ))}
                     </Tabs>
 
                 </Grid>

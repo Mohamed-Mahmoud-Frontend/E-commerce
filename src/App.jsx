@@ -7,10 +7,9 @@ import Header_Top from "./components/header/Header_Top";
 import Header_Mid from "./components/header/Header_Mid";
 import "./index.css";
 import Login from "./components/Login/Login";
-
 import Register from "./components/register/Register";
-// import Main  from "./components/main/Main";
-import  CardProduct  from "./components/card/CardProduct";
+import { Product } from "./components/Product/Product";
+
 const linksArray = ["Home", "Product", "cart", "Contact Us", "Service"];
 
 function App() {
@@ -22,13 +21,14 @@ function App() {
         <div className="App">
           <Header_Top />
 
-          <Header_Mid links={linksArray} />
+          <Header_Mid linksArray={linksArray} />
 
           <BrowserRouter>
             <Routes>
               <Route path="/login" element={<Login />} />
               <Route path="/Register" element={<Register />} />
-              <CardProduct />
+              <Route path="/" element={<Product />} />
+
             </Routes>
           </BrowserRouter>
           <Outlet />
