@@ -1,0 +1,238 @@
+    .Sec_login {
+        width: 100%;
+
+        background: #fff;
+        display: flex;
+        align-items: center;
+        padding: 25px;
+        border-radius: 6px;
+    }
+
+
+    .Login {
+        border-radius: 60px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column-r;
+    }
+
+    .Image_Login {
+        border-radius: 60px;
+        width: 50%;
+        position: relative;
+        overflow: hidden;
+
+    }
+
+    .Image_Login::before {
+        content: "";
+        position: absolute;
+        width: 80%;
+        height: 80%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background: #0337c479;
+        border-radius: 50%;
+    }
+
+
+    img {
+        width: 100%;
+        animation: up_down infinite 2s alternate;
+        transition: .3s ease-in;
+    }
+
+    @keyframes up_down {
+        0% {
+            transform: translateY(0);
+        }
+
+        100% {
+            transform: translateY(50px);
+
+        }
+    }
+
+    .Form_Login {
+    animation: slide_left  2s alternate ;
+
+        width: 50%;
+        margin: 0 auto;
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .Input_form {
+        position: relative;
+    }
+
+    .title_form {
+        margin-bottom: 15px;
+        font-size: 40px;
+        color: #0039b3b4;
+        font-weight: bold;
+        text-transform: capitalize;
+    }
+
+    .Input_form {
+        width: 100%;
+        padding-bottom: 30px;
+    }
+
+    .Input_form label {
+        position: absolute;
+        left: 15px;
+        top: -25px;
+        text-transform: uppercase;
+        color: #0039b3b4;
+        width: fit-content;
+        /* border: 2px solid #fff; */
+        transform: translateY(60%);
+        transition: .3s ease-in;
+        font-size: 18px;
+        background: #fff;
+        font-family: sans-serif;
+    }
+
+    .Input_form input {
+        border-radius: 6px;
+        padding: 10px;
+        font-size: 30px;
+        color: #4681ff;
+        width: 100%;
+
+        height: 60px;
+        outline: 2px solid #407BFF;
+        transition: 0.3s;
+        border: none;
+    }
+
+    .BTN_Login {
+        width: 100%;
+        height: 60px;
+        background: #407BFF;
+        color: #fff;
+        outline: none;
+        border: none;
+        border-radius: 6px;
+        font-size: 25px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .check {
+        height: 40px;
+        width: 100%;
+    }
+
+    .check::after {
+        content: "Remember me";
+        margin-left: 5px;
+        color: #0039b3b4;
+    }
+
+    .BTN_Login:hover {
+        background: #407cffc0;
+
+    }
+
+    .IconSocial {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+
+
+        padding-bottom: 2rem;
+    }
+
+    .IconSocial i {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        border-radius: 50%;
+        font-size: 1.5rem;
+        background: #eee;
+        transition: 0.3s ease-in;
+        border: none;
+        outline: none;
+        color: #333;
+    }
+
+    .IconSocial i:hover {
+        background: #407BFF;
+        color: #fff;
+        transform: translateY(-3px);
+    }
+
+    .circle_anim{
+        position: absolute;
+        top: 30%;
+        right: 15%;
+width: 50px;
+
+height: 50px;
+border-radius: 50%;
+animation: up_down infinite 2s alternate;
+
+background: #407BFF;
+
+    }
+    .slideInRight{
+
+        display: inline-block;
+
+        animation: slide_Right  2s alternate ;
+
+
+
+    }
+
+
+@keyframes slide_Right{
+0%{
+transform: translateX(-450px);
+opacity: 0;
+}
+100%{
+    transform: translateX(0);
+    opacity:1;
+
+}
+ }
+@keyframes slide_left{
+    0%{
+    transform: translateY(-450px);
+    opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity:1;
+
+    }
+}
+    @media (max-width:992px) {
+.Login{
+
+flex-direction: column-reverse;
+}
+.Form_Login{
+    width: 100%;
+}
+
+    }
+
+    @media (max-width:767px) {
+.Image_Login img{
+    display: none;
+}
+    }

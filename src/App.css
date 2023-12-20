@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: sans-serif;
+}
+.container{
+  width: 90%;
+margin-inline: auto;
+}
+.Head__top{
+  display: flex;
+  align-items: center;
+justify-content: space-between;
+background: #eee;
+}
