@@ -1,5 +1,6 @@
 import "./Login.css";
 import image from "../../assets/Login.svg";
+import { Link } from "@mui/material";
 
 const Login = () => {
   return (
@@ -21,17 +22,18 @@ const Login = () => {
             <form>
               <div className="Input_form">
                 <label htmlFor="email">Email</label>
-                <input type="email" placeholder="" />
+                <input type="email" placeholder="" required />
               </div>
               <div className="Input_form">
                 <label htmlFor="email">password</label>
-                <input type="password" placeholder="" />
+                <input type="password" placeholder="" required />
               </div>
               <div className="check">
-                <input type="checkbox" className="check_in" />
+                <input type="checkbox" className="check_in" required />
               </div>
-
-              <button className="BTN_Login">Login</button>
+              <Link href="/">
+                <button className="BTN_Login">Login</button>
+              </Link>
             </form>
           </div>
         </div>
